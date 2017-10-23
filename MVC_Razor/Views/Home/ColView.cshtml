@@ -1,11 +1,14 @@
 ﻿@model MVC_Razor.Models.PersonViewModel
 
 @{
-    ViewBag.Title = "title";   
+    ViewBag.Title = "title hi";   
 }
 
 <h2>title</h2>
 
+
+@Html.DisplayNameFor(a=>a.PreviousJobs)
 @foreach (var p in Model.PreviousJobs)
 {
+    @Html.DisplayText(p)
 }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace MVC_Razor.Models
 {
-    public class Person
+    public class PersonViewModel
     {
         public string FirstName { get; set; }
         [DisplayName("Previous roles")]

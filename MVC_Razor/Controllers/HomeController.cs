@@ -31,6 +31,7 @@ namespace MVC_Razor.Controllers
         public ActionResult ColView()
         {
             var p = new PersonViewModel();
+            p.PreviousJobs = new List<string> {"GBG", "bet36", "Amaze"};
             return View(p);
         }
 
