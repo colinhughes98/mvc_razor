@@ -5,6 +5,9 @@
 
 @using (Html.BeginForm())
 {
-    @Html.EditorFor(a=>a.Description)
-    <input type="submit">
+    <div class="form-group">
+        @Html.LabelFor(a => a.Description)
+        @Html.TextBoxFor(a => a.Description, new {@class = "form-control"})
+        <input type="submit">
+    </div>
 }
