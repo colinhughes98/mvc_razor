@@ -8,7 +8,9 @@
 
 
 @Html.DisplayNameFor(a=>a.PreviousJobs)
-@foreach (var p in Model.PreviousJobs)
-{
-    @Html.DisplayText(p)
-}
+
+
+    @foreach (var p in Model.PreviousJobs)
+    {
+        <div> @Html.Label(p, new { @class = "alert-danger" })</div>
+    }
