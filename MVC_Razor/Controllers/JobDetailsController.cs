@@ -1,13 +1,14 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 using MVC_Razor.Models;
 
 namespace MVC_Razor.Controllers
 {
-    
+    [RoutePrefix("job")]
     public class JobDetailsController : Controller
     {    
         [HttpGet]
-        // GET: JobDetails
+        [Route("details")]        
         public ActionResult Info()
         {
             JobInfo ji = new JobInfo {Description = "Hello"};
@@ -15,15 +16,24 @@ namespace MVC_Razor.Controllers
         }
         
         [HttpPost]
-        // GET: JobDetails
+        [Route("details")]        
         public ActionResult Info(JobInfo info)
         {
-           return RedirectToAction("Confirm");
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Confirm");
+            }
+            else
+            {                
+                return HttpNotFound();
+            }
         }
 
+        [Route("confirm")]
         public ActionResult Confirm()
         {
             return View();
         }
     }
-}
+
+  }
