@@ -12,7 +12,7 @@ namespace MVC_Razor.Controllers
         public ActionResult Info()
         {
             JobInfo ji = new JobInfo();
-            //remove
+            //remove here
             return View(ji);
         }
 
