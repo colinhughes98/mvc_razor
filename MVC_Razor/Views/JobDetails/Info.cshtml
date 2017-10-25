@@ -2,13 +2,21 @@
 
 
 <h2>title</h2>
+@Html.AntiForgeryToken()
+
 
 @using (Html.BeginForm())
 {
+   @Html.ValidationSummary(true)
     <div class="form-group">
-        @Html.DisplayFor(a=>a.Description)
-        @Html.LabelFor(a => a.Description)
-        @Html.EditorFor(a => a.Description, new {@class = "form-control"})
-        <input type="submit" value="Save">
+        @*@Html.DisplayFor(a=>a.Description)*@
+        <div>
+            @Html.LabelFor(a => a.Description)
+            @Html.TextBoxFor(a => a.Description, new {@class = "form-control"})
+        </div>
+        <div>
+            @Html.ValidationMessageFor(a => a.Description, string.Empty, new { @class = "text-danger" })
+        </div>
+        <input type="submit" value="Save" class="btn btn-primary">        
     </div>
 }

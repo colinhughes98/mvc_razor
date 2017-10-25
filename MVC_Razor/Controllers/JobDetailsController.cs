@@ -6,17 +6,18 @@ namespace MVC_Razor.Controllers
 {
     [RoutePrefix("job")]
     public class JobDetailsController : Controller
-    {    
+    {
         [HttpGet]
-        [Route("details")]        
+        [Route("details")]
         public ActionResult Info()
         {
-            JobInfo ji = new JobInfo {Description = "Hello"};
+            JobInfo ji = new JobInfo();
+            //ji.Description = "col";
             return View(ji);
         }
-        
+
         [HttpPost]
-        [Route("details")]        
+        [Route("details")]
         public ActionResult Info(JobInfo info)
         {
             if (ModelState.IsValid)
@@ -24,8 +25,8 @@ namespace MVC_Razor.Controllers
                 return RedirectToAction("Confirm");
             }
             else
-            {                
-                return HttpNotFound();
+            {
+                return View(info);
             }
         }
 
@@ -35,5 +36,4 @@ namespace MVC_Razor.Controllers
             return View();
         }
     }
-
-  }
+}
