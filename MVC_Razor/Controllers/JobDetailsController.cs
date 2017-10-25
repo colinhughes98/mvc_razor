@@ -12,7 +12,7 @@ namespace MVC_Razor.Controllers
         public ActionResult Info()
         {
             JobInfo ji = new JobInfo();
-            //ji.Description = "col";
+            //this is to cause a merge issue
             return View(ji);
         }
 
@@ -40,9 +40,7 @@ namespace MVC_Razor.Controllers
         public ActionResult Test(int first, int second)
         {
             return View();
-        }
-
-        
+        }      
     }
 
     public class BaseController : Controller
