@@ -12,7 +12,7 @@ namespace MVC_Razor.Controllers
         public ActionResult Info()
         {
             JobInfo ji = new JobInfo();
-            //this is to cause a merge issue
+            //remove
             return View(ji);
         }
 
