@@ -5,7 +5,7 @@ using MVC_Razor.Models;
 namespace MVC_Razor.Controllers
 {
     [RoutePrefix("job")]
-    public class JobDetailsController : Controller
+    public class JobDetailsController : BaseController
     {
         [HttpGet]
         [Route("details")]
@@ -34,6 +34,24 @@ namespace MVC_Razor.Controllers
         public ActionResult Confirm()
         {
             return View();
+        }
+
+        [Route("test")]
+        public ActionResult Test(int first, int second)
+        {
+            return View();
+        }
+
+        
+    }
+
+    public class BaseController : Controller
+    {
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            var exception = filterContext.Exception;
+
+            base.OnException(filterContext);
         }
     }
 }

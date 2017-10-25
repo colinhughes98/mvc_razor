@@ -15,7 +15,13 @@ namespace MVC_Razor
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);        
         }
+
+        protected void Application_Error()
+        {
+            var ex = Server.GetLastError();
+        }
+        
     }
 }

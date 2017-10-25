@@ -159,6 +159,7 @@
     <Content Include="Views\Home\ColView.cshtml" />
     <Content Include="Views\JobDetails\Info.cshtml" />
     <Content Include="Views\JobDetails\Confirm.cshtml" />
+    <Content Include="Views\JobDetails\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
