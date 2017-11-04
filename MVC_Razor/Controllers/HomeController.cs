@@ -17,7 +17,7 @@ namespace MVC_Razor.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page. from git hub";
-            var b = "from github - from VS";
+            var b = "from github - so there";
 
             return View();
         }
