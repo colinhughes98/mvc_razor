@@ -17,6 +17,7 @@ namespace MVC_Razor.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+            var a = "to try merge";
 
             return View();
         }
