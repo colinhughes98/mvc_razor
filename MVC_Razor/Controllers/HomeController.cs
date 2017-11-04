@@ -16,8 +16,8 @@ namespace MVC_Razor.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-            var a = "to try merge";
+            ViewBag.Message = "Your application description page. from git hub";
+            var b = "from github";
 
             return View();
         }
